@@ -1,9 +1,13 @@
-
-
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
 
 .headsite{
     text-align: left;
     display: inline-block;
+}
+
+body {
+  font-family: 'Open-sans', sans-serif;
+  font-size: 1em;
 }
 
 
