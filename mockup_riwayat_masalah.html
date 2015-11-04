@@ -2,12 +2,32 @@
 <html>
     <head>
         <title>Riwayat Masalah #1234</title>
+        <style>
+            *{margin:0;padding:0;}
+            .row:before, .row:after{
+                content:"";
+                display:table;
+                clear: both;
+                padding: 10px 0;
+            }
+            [class*='kolom-']{
+                float: left;
+                min-height: 1px;
+                width: 50%;
+            }
+            #kolom1, #kolom2{
+                float:left;
+                width:50%;
+                min-height: 1px;
+            }
+        </style>
+
     </head>
     <body>
         <div class="header row">
             <h1>Problem #1234</h1>
         </div>
-        <div id="main">
+        <div id="main" class="row">
             <div id="kolom1">
                <!--detil masalah--> 
                <div class="row">
