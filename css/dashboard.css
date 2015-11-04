@@ -17,3 +17,18 @@ header div {
 .listmenu, .sitecontent {
     display: inline-block;
 }
+
+.listmenu li {
+    list-style: none;
+}
+
+.greeting {
+    text-align: right;
+}
+
+.greeting li {
+    position: relative;
+    right: 0;
+    display: inline-block;
+    list-style: none;
+}
