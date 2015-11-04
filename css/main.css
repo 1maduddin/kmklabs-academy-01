@@ -3,7 +3,28 @@
 
 .headsite{
     text-align: left;
-    display: inline-block;
+    /*display: inline-block;*/
+    color : red;
 }
 
 
+@import url(https://fonts.googleapis.com/css?family=Roboto|Open+Sans);
+
+
+a:visited  {
+
+    color:blue;
+}
+h3{
+    font-weight: 200;
+    text-decoration: underline;
+}
+.headsite>h3{
+    font-style: italic;
+}
+#logo{
+    border: 1px solid #000;
+}
+.greeting li{
+    list-style: circle;
+}
