@@ -9,3 +9,11 @@ html {
     -webkit-box-sizing: inherit; 
     box-sizing: inherit;
 }
+
+header div {
+    display: inline-block;
+}
+
+.listmenu, .sitecontent {
+    display: inline-block;
+}
