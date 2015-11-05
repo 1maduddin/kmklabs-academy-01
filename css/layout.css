@@ -1,0 +1,19 @@
+*{margin:0;padding:0;}
+
+.container{
+    margin:0px auto;
+    min-width: 100%; 
+}
+.container>header{ clear:both; }
+.container>header>.logo{
+    border: 1px solid #000;
+    display: inline-block;
+}
+.container>header>.user-info{
+    width: 180px;
+    border: 1px solid #000;
+    display: inline-block;
+}
+.container>header>.user-info:after{
+    clear:both;
+}
