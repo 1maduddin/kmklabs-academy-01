@@ -1,0 +1,109 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700);
+@import url(https://fonts.googleapis.com/css?family=Maven+Pro);
+
+html{
+	background-color: #F0FFF0;
+}
+
+body{
+	background-color: #E6E6FA;
+}
+
+header{
+    position: relative;
+    height: 40px;
+    border: 1px solid black;
+}
+
+header>div>img{
+	background-color: black;
+	width: 60px;
+	height: 40px;
+}
+header>div[class="logo"]{
+	width: 100px;
+	display: inline;
+	float: left;
+}
+
+header>div[class="user-info"]{
+	width: 100px;
+	display: inline;
+	float: right;
+}
+
+.user-info{
+	font-family: 'Oswald', sans-serif;
+}
+
+.content {
+    position: relative;
+    float: left;
+    width: 55%;
+    border: 1px solid black;
+    margin: 5px 3px 5px 3px;
+    padding-left: 7px;
+    padding-right: 7px;
+
+}
+
+.content>p{
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 21px;
+}
+.left {
+	position: relative;
+    float: left;
+    width: 18%;
+    border: 1px solid black;
+    margin-top: 5px;
+    height: 200px;
+    overflow: scroll;
+}
+
+.right {
+    position: relative;
+    width: 18%;
+    float: left;
+    border: 1px solid black;    
+    margin-top: 5px;
+    height: 200px;
+    overflow: scroll;
+}
+
+.clear {
+	clear: both;
+}
+
+footer{
+    position: relative;
+    border: 1px solid black;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Maven Pro', sans-serif;
+}
+a{
+	text-decoration: none;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover {
+    color: hotpink;
+}
+
+a:active {
+    color: blue;
+}
+
+ul{
+    list-style-type: hiragana-iroha;
+}
