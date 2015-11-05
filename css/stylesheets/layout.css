@@ -22,63 +22,76 @@ div {
 /* line 12, ../sass/layout.scss */
 .container header .logo {
   float: left;
-  border: 1px solid #000;
   height: 100px;
   width: 100px;
 }
-/* line 17, ../sass/layout.scss */
+/* line 16, ../sass/layout.scss */
 .container header .logo img {
   height: 70px;
   width: 70px;
   margin: 1uto;
 }
-/* line 23, ../sass/layout.scss */
+/* line 22, ../sass/layout.scss */
 .container header .user-info {
-  border: 1px solid #000;
   height: 100px;
   text-align: right;
 }
 
-/* line 30, ../sass/layout.scss */
+/* line 28, ../sass/layout.scss */
 .clear {
   clear: both;
 }
 
-/* line 33, ../sass/layout.scss */
-.left {
-  float: left;
-  width: 20%;
-  border: 1px solid #000;
-}
-
-/* line 38, ../sass/layout.scss */
-.content {
-  float: left;
-  width: 60%;
-}
-
-/* line 42, ../sass/layout.scss */
-.right {
-  float: left;
-  width: 20%;
-  border: 1px solid #000;
-}
-
-/* line 47, ../sass/layout.scss */
+/* line 31, ../sass/layout.scss */
 footer {
   line-height: 100px;
-  border: 1px solid #000;
   text-align: center;
 }
 
-/* line 52, ../sass/layout.scss */
+/* line 35, ../sass/layout.scss */
 li {
   list-style-position: inside;
 }
 
-@media (max-width: 760px) {
-  /* line 56, ../sass/layout.scss */
-  .left, .content, .right {
+/* line 38, ../sass/layout.scss */
+.left, .right, .content {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  /* line 42, ../sass/layout.scss */
+  .left {
+    float: left;
+    width: 40%;
+  }
+
+  /* line 46, ../sass/layout.scss */
+  .content {
+    float: left;
+    width: 60%;
+  }
+
+  /* line 50, ../sass/layout.scss */
+  .right {
     width: 100%;
+  }
+}
+@media screen and (min-width: 760px) {
+  /* line 55, ../sass/layout.scss */
+  .left {
+    float: left;
+    width: 20%;
+  }
+
+  /* line 59, ../sass/layout.scss */
+  .content {
+    float: left;
+    width: 60%;
+  }
+
+  /* line 63, ../sass/layout.scss */
+  .right {
+    float: left;
+    width: 20%;
   }
 }
