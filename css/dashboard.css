@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
 html {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -10,8 +12,10 @@ html {
     box-sizing: inherit;
 }
 
+
 body {
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 header div {
@@ -55,7 +59,6 @@ section {
     font-size: 16px;
 }
 
-
 .greeting {
     padding-top: 15px;
     text-align: right;
@@ -70,7 +73,7 @@ section {
 }
 
 .sitecontent, .listmenu {
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .sitecontent {
