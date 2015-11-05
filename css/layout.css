@@ -1,0 +1,62 @@
+*{margin:0;padding:0;}
+
+header{
+  height: 60px;
+  width: 100%;
+  background: red;
+  display: block;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.logo{
+  float: left;  
+  margin: 10px 10px;
+}
+
+.logo img{
+  width: 40px;
+  height: 40px;
+}
+
+.user-info{
+  float: right;
+  margin: 10px;
+}
+
+.left{
+  clear: both;
+  float: left;
+  background: yellow;
+  width: 10%;
+  height: 400px;
+  padding: 3%; 
+}
+
+.content{
+  float: left;
+  width: 68%;
+  background: grey;
+  height: 480px;
+  
+}
+
+.right{
+  float: right;
+  background: yellow;
+  width: 10%;
+  height: 400px;
+  padding: 3%;
+}
+
+.footer{
+  clear: both;
+  background: red;
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+}
