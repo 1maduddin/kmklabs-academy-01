@@ -6,7 +6,7 @@
 
 /* line 2, ../sass/layout.scss */
 body {
-  font: 16px/1.6 Sans-serif;
+  font: 12px/1.6 Sans-serif;
 }
 
 /* line 5, ../sass/layout.scss */
@@ -60,36 +60,46 @@ li {
 
 @media (min-width: 600px) {
   /* line 42, ../sass/layout.scss */
+  body {
+    font-size: 16px;
+  }
+
+  /* line 45, ../sass/layout.scss */
   .left {
     float: left;
     width: 20%;
   }
 
-  /* line 46, ../sass/layout.scss */
+  /* line 49, ../sass/layout.scss */
   .content {
     float: left;
     width: 80%;
   }
 
-  /* line 50, ../sass/layout.scss */
+  /* line 53, ../sass/layout.scss */
   .right {
     width: 100%;
   }
 }
 @media screen and (min-width: 760px) {
-  /* line 55, ../sass/layout.scss */
+  /* line 58, ../sass/layout.scss */
+  body {
+    font-size: 18px;
+  }
+
+  /* line 61, ../sass/layout.scss */
   .left {
     float: left;
     width: 20%;
   }
 
-  /* line 59, ../sass/layout.scss */
+  /* line 65, ../sass/layout.scss */
   .content {
     float: left;
     width: 60%;
   }
 
-  /* line 63, ../sass/layout.scss */
+  /* line 69, ../sass/layout.scss */
   .right {
     float: left;
     width: 20%;
