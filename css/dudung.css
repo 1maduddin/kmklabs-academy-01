@@ -13,5 +13,63 @@ html {
     box-sizing: inherit;
 }
 
+body {
+    margin: 0;
+}
 
+header {
+    padding-top: 20px;
+    width: 100%; 
+}
 
+.logo {
+    margin-right: -4px;
+    display: inline-block;
+    width: 30%;
+    height: 20px;
+}
+
+.logo img {
+    position: relative;
+    top: 0;
+    max-width: 70px;
+    max-height: 70px;
+}
+
+.user-info {
+    margin-right: -4px;
+    vertical-align: top;
+    display: inline-block;
+    text-align: right; 
+    width: 69%;
+    height: 20px;
+}
+
+.clear {
+    clear: both;
+}
+
+.left {
+    width: 20%;
+    float: left;
+}
+
+.content {
+    width: 60%;
+    float: left;
+}
+
+.right {
+    width: 20%;
+    float: left;
+}
+
+.footer {
+    text-align: center;
+}
+
+@media (max-width: 780px) {
+    .left, .content, .right {
+        width: 100%;
+    }
+}
