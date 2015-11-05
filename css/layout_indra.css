@@ -1,8 +1,46 @@
 .container {
-
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .logo img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
+}
+
+.logo {
+    float: left;
+    box-sizing: border-box;
+}
+
+.user-info {
+    float: right;
+    
+}
+
+.clear{
+    clear: both;
+}
+
+.left{
+    float: left;
+    width: 25%;
+    box-sizing: border-box;
+}
+
+.content{
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.right{
+    float: left;
+    box-sizing: border-box;
+    width: 25%;
+}
+
+.footer{
+    text-align: center;
 }
