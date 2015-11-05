@@ -4,16 +4,37 @@
     margin:0px auto;
     min-width: 100%; 
 }
-.container>header{ clear:both; }
 .container>header>.logo{
+    width: 100px;
+    overflow: hidden;
+    height: 100px;
+    float:left;
     border: 1px solid #000;
-    display: inline-block;
 }
 .container>header>.user-info{
-    width: 180px;
     border: 1px solid #000;
-    display: inline-block;
+    height: 100px;
+    text-align: right;
 }
-.container>header>.user-info:after{
-    clear:both;
+.clear{
+    clear: both;
+}
+.left{
+    float: left;
+    width: 10%;
+}
+.content{
+    width: 80%;
+    float: left;
+}
+.right{
+    float: right;
+    width: 10%;
+}
+.right li{
+    list-style-position: inside;
+}
+footer{
+    height: 100px;
+    border:1px solid #000;
 }
