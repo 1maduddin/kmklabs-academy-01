@@ -57,6 +57,7 @@ section {
 
 .headsite h3 {
     font-size: 16px;
+    width: 49%;
 }
 
 .greeting {
@@ -90,3 +91,31 @@ section {
     padding-bottom: 20px;
 }
 
+@media (max-width: 800px) {
+    .sitecontent, .listmenu, .greeting, .headsite {
+        width: 100%;
+    }
+
+    .headsite {
+        padding-left: 0;
+    }
+
+    .sitecontent {
+        padding-right: 0;
+    }
+
+    .greeting h3 {
+    }
+
+    .greeting {
+        text-align: center;
+    }
+
+    .listmenu {
+        padding-right: 0;
+    }
+
+    .listmenu li {
+        text-align: center;
+    }
+}
