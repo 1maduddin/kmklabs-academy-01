@@ -1,0 +1,84 @@
+/* line 1, ../sass/layout.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 2, ../sass/layout.scss */
+body {
+  font: 16px/1.6 Sans-serif;
+}
+
+/* line 5, ../sass/layout.scss */
+div {
+  box-sizing: border-box;
+}
+
+/* line 8, ../sass/layout.scss */
+.container {
+  margin: 0% auto;
+  max-width: 1200px;
+}
+/* line 12, ../sass/layout.scss */
+.container header .logo {
+  float: left;
+  border: 1px solid #000;
+  height: 100px;
+  width: 100px;
+}
+/* line 17, ../sass/layout.scss */
+.container header .logo img {
+  height: 70px;
+  width: 70px;
+  margin: 1uto;
+}
+/* line 23, ../sass/layout.scss */
+.container header .user-info {
+  border: 1px solid #000;
+  height: 100px;
+  text-align: right;
+}
+
+/* line 30, ../sass/layout.scss */
+.clear {
+  clear: both;
+}
+
+/* line 33, ../sass/layout.scss */
+.left {
+  float: left;
+  width: 20%;
+  border: 1px solid #000;
+}
+
+/* line 38, ../sass/layout.scss */
+.content {
+  float: left;
+  width: 60%;
+}
+
+/* line 42, ../sass/layout.scss */
+.right {
+  float: left;
+  width: 20%;
+  border: 1px solid #000;
+}
+
+/* line 47, ../sass/layout.scss */
+footer {
+  line-height: 100px;
+  border: 1px solid #000;
+  text-align: center;
+}
+
+/* line 52, ../sass/layout.scss */
+li {
+  list-style-position: inside;
+}
+
+@media (max-width: 760px) {
+  /* line 56, ../sass/layout.scss */
+  .left, .content, .right {
+    width: 100%;
+  }
+}
