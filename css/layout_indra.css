@@ -33,6 +33,7 @@
     float: left;
     width: 50%;
     box-sizing: border-box;
+    padding: 15px;
 }
 
 .right{
@@ -44,3 +45,12 @@
 .footer{
     text-align: center;
 }
+
+@media (max-width: 480px){
+    .left, .content, .right{
+        width: 100%;
+        float: none;
+    }
+     
+
+} 
