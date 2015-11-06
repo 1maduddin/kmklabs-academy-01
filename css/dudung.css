@@ -54,6 +54,10 @@ header {
     float: left;
 }
 
+.left li {
+    list-style: none;
+}
+
 .content {
     width: 60%;
     float: left;
@@ -62,6 +66,10 @@ header {
 .right {
     width: 20%;
     float: left;
+}
+
+.right li {
+    list-style: none;
 }
 
 .footer {
@@ -73,3 +81,4 @@ header {
         width: 100%;
     }
 }
+

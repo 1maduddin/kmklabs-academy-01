@@ -57,7 +57,6 @@ section {
 
 .headsite h3 {
     font-size: 16px;
-    width: 49%;
 }
 
 .greeting {
@@ -96,26 +95,15 @@ section {
         width: 100%;
     }
 
-    .headsite {
-        padding-left: 0;
-    }
-
-    .sitecontent {
-        padding-right: 0;
-    }
-
     .greeting h3 {
+        display: none;
     }
 
     .greeting {
-        text-align: center;
+        text-align: left;
     }
 
-    .listmenu {
-        padding-right: 0;
-    }
-
-    .listmenu li {
-        text-align: center;
+    .sitecontent div {
+        margin: 0 auto;
     }
 }
