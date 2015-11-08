@@ -1,0 +1,225 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url(https://fonts.googleapis.com/css?family=Raleway:700|Roboto+Slab:400,700);
+/* line 5, ../../../../../../home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../home/vagrant/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 12, ../sass/screen.scss */
+div {
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 992px) {
+  /* line 16, ../sass/screen.scss */
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
+
+/* line 23, ../sass/screen.scss */
+.row {
+  padding: 15px;
+}
+
+/* line 27, ../sass/screen.scss */
+.clear {
+  float: none;
+  clear: both;
+}
+
+/* line 32, ../sass/screen.scss */
+.left {
+  border-bottom: 1px solid #ebebeb;
+}
+@media only screen and (min-width: 992px) {
+  /* line 32, ../sass/screen.scss */
+  .left {
+    float: left;
+    width: 70%;
+    border-bottom: 0;
+    border-right: 1px solid #ebebeb;
+  }
+}
+
+/* line 42, ../sass/screen.scss */
+.right {
+  border-top: 1px solid #ebebeb;
+}
+@media only screen and (min-width: 992px) {
+  /* line 42, ../sass/screen.scss */
+  .right {
+    float: right;
+    width: 30%;
+    border-top: 0;
+  }
+}
+
+/* line 51, ../sass/screen.scss */
+.title-content {
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* line 57, ../sass/screen.scss */
+.item {
+  max-width: 40%;
+  margin: 15px 5%;
+  float: left;
+  text-align: center;
+}
+/* line 62, ../sass/screen.scss */
+.item .product-image {
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* line 66, ../sass/screen.scss */
+.item .product-name {
+  font-family: "Roboto Slab", serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #349182;
+}
+/* line 72, ../sass/screen.scss */
+.item .product-price {
+  font-family: "Roboto Slab", serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1d1d1d;
+}
+/* line 78, ../sass/screen.scss */
+.item p {
+  margin-bottom: 5px;
+}
+
+/* line 82, ../sass/screen.scss */
+.sidebar {
+  margin-bottom: 25px;
+}
+/* line 84, ../sass/screen.scss */
+.sidebar .sidebar-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #1d1d1d;
+  border-bottom: 2px solid #373737;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+/* line 94, ../sass/screen.scss */
+.sidebar ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #838383;
+}
+/* line 97, ../sass/screen.scss */
+.sidebar ul li a {
+  text-decoration: none;
+  margin-right: 10px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #1d1d1d;
+}
+/* line 104, ../sass/screen.scss */
+.sidebar ul li a:hover {
+  color: #349182;
+}
+/* line 108, ../sass/screen.scss */
+.sidebar ul li span {
+  margin-right: 10px;
+}
+/* line 111, ../sass/screen.scss */
+.sidebar ul li .promo-price {
+  color: #cf293d;
+  font-weight: 700;
+}
+/* line 115, ../sass/screen.scss */
+.sidebar ul li .normal-price {
+  color: grey;
+  text-decoration: line-through;
+}
+/* line 121, ../sass/screen.scss */
+.sidebar .review-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #838383;
+}
+/* line 124, ../sass/screen.scss */
+.sidebar .review-item .customer-name {
+  margin-bottom: 10px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #1d1d1d;
+}
+/* line 131, ../sass/screen.scss */
+.sidebar .review-item .customer-review {
+  color: grey;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 14px;
+}
