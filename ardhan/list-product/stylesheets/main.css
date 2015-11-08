@@ -1,0 +1,230 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+/* line 5, ../../../../../../.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/**************/
+/** Variable **/
+/**************/
+/***************/
+/** Function ***/
+/***************/
+/***************/
+/**** Mixin ****/
+/***************/
+/**************/
+/*** Content **/
+/**************/
+/* line 60, ../sass/main.scss */
+body {
+  font-family: "Bree serif", serif;
+}
+
+/* line 64, ../sass/main.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 2.2em;
+  margin-bottom: 10px;
+  font-family: "Helvetica", sans-serif;
+  display: block;
+  width: 100%;
+}
+
+/* line 71, ../sass/main.scss */
+h1.cool-title {
+  border-bottom: 3px solid #ff77ad;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+/* line 76, ../sass/main.scss */
+.clearfix {
+  clear: both;
+}
+
+/* line 79, ../sass/main.scss */
+.content {
+  padding: 1%;
+}
+@media only screen and (min-width: 481px) {
+  /* line 79, ../sass/main.scss */
+  .content {
+    width: 70%;
+    float: left;
+  }
+}
+/* line 86, ../sass/main.scss */
+.content .product-container .product-list {
+  border: 1px solid transparent;
+  width: 48%;
+  float: left;
+  margin-bottom: 10px;
+}
+/* line 93, ../sass/main.scss */
+.content .product-container .product-list .product-image a img {
+  display: block;
+  margin: 0 auto;
+}
+/* line 99, ../sass/main.scss */
+.content .product-container .product-list .product-desc {
+  padding: 10px;
+  text-align: center;
+}
+/* line 102, ../sass/main.scss */
+.content .product-container .product-list .product-desc .product-name, .content .product-container .product-list .product-desc .product-price {
+  margin-bottom: 10px;
+}
+/* line 105, ../sass/main.scss */
+.content .product-container .product-list .product-desc .product-price {
+  color: black;
+}
+@media only screen and (min-width: 1024px) {
+  /* line 86, ../sass/main.scss */
+  .content .product-container .product-list {
+    width: 23%;
+  }
+}
+/* line 113, ../sass/main.scss */
+.content .product-container .product-list:hover {
+  border: 1px solid #ff77ad;
+}
+
+/* line 119, ../sass/main.scss */
+.sidebar .product-promo {
+  border: 1px solid #ff77ad;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+/* line 121, ../sass/main.scss */
+.sidebar .product-promo a .product-name {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  float: left;
+  vertical-align: middle;
+}
+/* line 127, ../sass/main.scss */
+.sidebar .product-promo a .product-price {
+  float: right;
+}
+/* line 130, ../sass/main.scss */
+.sidebar .product-promo a .product-promo-price {
+  text-decoration: line-through;
+  color: red;
+  text-align: right;
+}
+/* line 135, ../sass/main.scss */
+.sidebar .product-promo a .product-old-price {
+  color: black;
+}
+/* line 145, ../sass/main.scss */
+.sidebar .costumer-review {
+  padding: 10px;
+}
+/* line 147, ../sass/main.scss */
+.sidebar .costumer-review h3 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+/* line 152, ../sass/main.scss */
+.sidebar .costumer-review ul.review-list li {
+  padding: 10px;
+  border-bottom: 1px solid #bbbbbb;
+}
+/* line 155, ../sass/main.scss */
+.sidebar .costumer-review ul.review-list li .date {
+  opacity: .5;
+  font-size: 12px;
+}
+@media only screen and (min-width: 481px) {
+  /* line 118, ../sass/main.scss */
+  .sidebar {
+    padding: 20px 0;
+    float: left;
+    width: 28%;
+  }
+  /* line 169, ../sass/main.scss */
+  .sidebar .product-promo a .product-name {
+    font-size: 1.2em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /* line 118, ../sass/main.scss */
+  .sidebar {
+    padding: 20px 0;
+    float: left;
+    width: 28%;
+  }
+  /* line 181, ../sass/main.scss */
+  .sidebar .product-promo a .product-name {
+    font-size: 1.2em;
+  }
+}

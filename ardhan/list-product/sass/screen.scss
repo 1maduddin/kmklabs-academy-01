@@ -1,0 +1,109 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+$main-color: rgb(255, 119, 173);
+$secondary-color: rgb(127, 98, 109);
+$font-content: 'Bree serif', serif;
+$font-title: 'Helvetica', sans-serif;
+$base-padding: 10px;
+@function padding-count($base-padding, $new-padding){
+	@return $base-padding + $new-padding
+}
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+body{
+	font-family: $font-content;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-size: 2.2em;
+	margin-bottom: 10px;
+	font-family: $font-title;
+}
+h1.cool-title{
+	border-bottom: 3px solid $main-color;
+	padding-bottom: 10px;
+	display: inline-block;
+}
+.clearfix{
+	clear: both;
+}
+.content{
+	padding: padding-count($base-padding, 10px);
+	.product-container{
+		.product-list{
+			border: 1px solid transparent;
+			width: 48%;
+			float: left;
+			margin-bottom: 10px;
+			.product-desc{
+				padding: 10px;
+				text-align: center;
+				.product-name, .product-price{
+					margin-bottom: 10px;
+				}
+				.product-price{
+					color: black;
+				}
+			}
+		}
+		.product-list:hover{
+			border: 1px solid $main-color;
+		}
+	}
+}
+.sidebar{
+	.product-promo{
+		a{
+			.product-name{
+				font-size: 1.5em;
+				margin-bottom: 10px;
+				float: left;
+				vertical-align: middle;
+			}
+			.product-price{
+				float: right;
+			}
+			.product-promo-price{
+				text-decoration: line-through;
+				color: red;
+				text-align: right;
+			}
+			.product-old-price{
+				color: black;
+			}
+		}
+		border: 1px solid $main-color;
+		@include border-radius(4px);
+		padding: 10px;
+		margin-bottom: 10px;
+		overflow: hidden;
+	}
+	.costumer-review{
+		padding: 10px;
+		h3{
+			margin-bottom: 10px;
+			font-size: 1.2em;
+		}
+		ul.review-list{
+			li{
+				padding: 10px;
+				border-bottom: 1px solid grayscale($main-color);
+				.date{
+					opacity: .5;
+					font-size: 12px;
+				}
+			}
+		}
+
+	}
+}
