@@ -90,3 +90,20 @@ section {
     padding-bottom: 20px;
 }
 
+@media (max-width: 800px) {
+    .sitecontent, .listmenu, .greeting, .headsite {
+        width: 100%;
+    }
+
+    .greeting h3 {
+        display: none;
+    }
+
+    .greeting {
+        text-align: left;
+    }
+
+    .sitecontent div {
+        margin: 0 auto;
+    }
+}
