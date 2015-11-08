@@ -1,0 +1,77 @@
+
+dy {
+background:;
+color:none;
+font: 85%/140% Arial, Helvetica, sans-serif;
+margin: 0 auto;
+}
+
+a:hover {
+color:#F60;
+}
+
+a {
+    color: #69C;
+    text-decoration: none;
+}
+
+h1{
+font:1.7em;
+color:#000;
+}
+
+h1, h2, h3 {
+color:#000;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+    display: block;
+}
+    
+/****************************************/
+.layout {
+padding:5px;
+width:960px;
+margin:20px auto ;
+}
+    
+.header {
+height:50px;
+background:yellow;
+margin-bottom:5px;
+}
+
+
+.content {
+width: 650px;
+float:left;
+background:grey;
+margin-bottom:5px;
+}
+
+.promo {
+width: 250px;
+float: right;
+margin-bottom:5px;
+}
+
+.image {
+float:left;
+}
+
+.product-description {
+        text-align: center;
+}
+
+.footer {
+clear:both;
+margin-bottom:5px;
+}
+
+
+.header, .content, .image, .promo,.footer { padding:10px;}
+.layout, .header, .content, .promo, .footer { border: solid 1px;  }
+
+.wrapper {
+overflow:hidden;
+ }
