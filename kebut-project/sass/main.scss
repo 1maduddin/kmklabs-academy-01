@@ -1,0 +1,129 @@
+@import "colors";
+@import "typo";
+@import "utilities";
+
+body {
+    background-color: $grey;
+    font-family: $font-family--content;
+}
+
+h1 {
+    padding: 35px 15px 15px 15px;
+    font-family: $font-family--heading;
+    /*font-weight: 700;*/
+    font-size: 35px;
+    text-align: center;
+    color: #444444
+    /*position: fixed;*/
+}
+
+.container {
+    padding: 0 15px;
+}
+
+.content {
+    .item {
+        text-align: center;
+        /*border: 1px solid grey;*/
+        margin-bottom: 10px;
+        padding-top: 20px;
+        padding-bottom: 5px;
+        background-color: $white;
+        img {
+            max-width: 250px;
+        }
+        .discription {
+            /*color: darken($brown, 20%);*/
+            color: darken($grey, 50%);
+        }
+        .block-price {
+            background-color: $green;
+            margin: 0px 150px;
+            border-top-left-radius:     5px;
+            border-top-right-radius:    5px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius:  5px; 
+            .price{
+                font-size: 12px;
+                color: $white;
+                font-weight: bold;
+                padding: 10px 0px 10px 0px;
+            }
+        }
+        p {
+            padding-left: 10px;
+        }
+    }
+}
+
+
+
+.right{
+    .promo-item {
+        background-color: darken($orange, 3%);
+        width: 48%;  
+        float: left;
+        .judul-promo{
+            padding: 80px 20px 80px 20px;
+            color: $white;
+            font-weight: bold;
+            font-family: $font-family--heading;
+            text-align: center;
+        }
+
+                    /*&:hover {*/
+                        /*color: lighten($grey, 10%);   */
+                    /*}*/
+
+        .promo-diskription{
+
+            background-color: $white;
+            .old-price{
+
+            }
+
+            .actual-price{
+                
+            }
+        }
+    }
+    
+    
+    .preview {
+        background-color: $blue;
+        width: 48%;
+        float: right; 
+        .judul-preview{
+            padding: 80px 20px 80px 20px;
+            color: $white;
+            font-weight: bold;
+            font-family: $font-family--heading;
+            text-align: center;
+        }
+
+                    /*&:hover {*/
+                        /*color: lighten($grey, 10%);   */
+                    /*}*/
+
+        .list-preview{
+
+            background-color: $white;
+            .coment{
+
+            }
+
+            .person{
+                
+            }
+        }
+    }
+    
+}
+
+
+    @media (min-width: 900px){
+        @include desktop-item;
+        @include desktop-promo-item; 
+     }
+ 
+ 
