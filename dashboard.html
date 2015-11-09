@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="css/dashboard.css" title="" type="" />
+        <meta charset="UTF-8">
+        <title>Dashboard</title>
+    </head>
+    <body>
+        <!--
+        TRIVIA
+        ******
+        Agar tidak ada "gap" diantara inline-block elemen, 
+        maka harus disisipkan tag "comment" di antara div. 
+        Ada banyak cara, bisa dilihat di:
+        https://davidwalsh.name/remove-whitespace-inline-block
+        atau cari saja di si Mbah Google dengan query 
+        "remove space between inline block elements"
+
+        Karena inline-block > float
+        -->
+        <header>
+            <div class = "headsite">
+                <img src="logo.png" width = 100px 
+                    height = 100px alt="helpdesk">
+                <h1>
+                    Aplikasi Helpdesk
+                </h1>
+                <h3>Menyelesaikan masalah Anda dengan cepat</h3>
+            </div><!--
+            --><div class = "greeting">
+                <h3>Selamat Datang, Endy Muhardin</h3>
+                <nav>
+                    <ul>
+                        <li><a href="#">Pengaturan</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class = "listmenu">
+            <ul>
+                <li><a href="#">Laporkan Masalah</a></li>
+                <li><a href="#">Lihat Status Laporan</a></li>
+                <li><a href="#">Pengaturan Notifikasi</a></li>
+            </ul>
+        </section><!--
+        --><section class = "sitecontent">
+               <h3>Halo, Andy Muhardin</h3>
+               <p>Anda sudah melaporkan <a href="#">100</a> masalah <br> 
+                  <a href="#">80</a> telah terselesaikan <br />
+                  <a href="#">20</a> masih dalam penanganan
+               </p>
+        </section>
+        <footer></footer>
+    </body>
+</html>
