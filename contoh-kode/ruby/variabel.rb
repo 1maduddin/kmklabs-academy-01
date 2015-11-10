@@ -52,6 +52,7 @@ puts "Email : #{emails}"
 konfigurasi = {"username" => "endy", "password" => "rahasia"};
 puts "Konfigurasi : #{konfigurasi}";
 puts "Username : #{konfigurasi["username"]}";
+puts "Daftar key dalam hash : #{konfigurasi.keys}"
 
 # Symbol : string yang immutable (sekali diset tidak bisa diubah)
 # biasanya digunakan sebagai key dalam hash
