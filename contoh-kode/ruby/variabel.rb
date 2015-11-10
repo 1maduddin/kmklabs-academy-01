@@ -44,6 +44,8 @@ puts "Alamat email : #{emails}";
 puts "Jumlah alamat email : #{emails.size}";
 puts "Email utama : #{emails[0]}";
 
+emails[5] = "endymuhardin@yahoo.com";
+puts "Email : #{emails}"
 
 # Hash
 
