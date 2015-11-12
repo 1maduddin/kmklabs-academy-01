@@ -48,8 +48,56 @@ class PenjualanDetail
 
 end
 
+class Pembayaran
+    attr_accessor :nilai
+
+    def bayar
+        puts "Pilih metode pembayaran, tunai atau kartu"
+    end
+end
+
+class Tunai < Pembayaran
+    attr_accessor :dibayar
+
+    def kembalian
+        @dibayar - @nilai
+    end
+
+    def bayar
+        super
+        puts "Metode pembayaran : tunai"
+        puts "Nilai transaksi : #{@nilai}"
+        puts "Dibayar : #{@dibayar}"
+        puts "Kembalian : #{kembalian}"
+    end
+end
+
+class Kartu < Pembayaran
+    attr_accessor :bank, :no_kartu, :kode_otorisasi
+
+    def bayar
+        puts "Metode pembayaran : kartu"
+        puts "Nilai transaksi : #{@nilai}"
+        puts "Bank : #{@bank}"
+        puts "No Kartu : #{@no_kartu}"
+
+        validasi_kartu
+
+        puts "Otorisasi : #{@kode_otorisasi}"
+    end
+
+    private
+
+    def validasi_kartu
+        puts "Menghubungi bank #{@bank} untuk mengecek keabsahan kartu #{@no_kartu}"
+        @kode_otorisasi = 10.times.map{ 20 + Random.rand(11) }.join 
+    end
+
+end
+
 class Penjualan
-    attr_accessor :daftar_belanja, :waktu, :kasir
+    attr_accessor :daftar_belanja, :waktu, :kasir 
+    attr_reader :pembayaran
 
     def initialize
         @daftar_belanja = Array.new
@@ -61,6 +109,11 @@ class Penjualan
             total_belanja += b.subtotal
         end
         total_belanja
+    end
+
+    def pembayaran=(p)
+        @pembayaran = p
+        p.nilai = total
     end
 end
 
@@ -107,6 +160,17 @@ def demo
     p.daftar_belanja << pd2
     puts p.total
 
+    cash = Tunai.new
+    cash.dibayar = 50000
+    p.pembayaran = cash
+    puts cash.bayar
+
+    flazz = Kartu.new
+    flazz.bank = "BCA"
+    flazz.no_kartu = "1234567890"
+    p.pembayaran = flazz
+    # flazz.validasi_kartu # private method tidak bisa dipanggil dari luar
+    flazz.bayar
 
 end
 
