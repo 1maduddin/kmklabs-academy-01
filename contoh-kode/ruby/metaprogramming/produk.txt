@@ -1,0 +1,3 @@
+kode,nama,harga
+N-001,Nasi Putih,10000
+A-001,Ayam Goreng,25000

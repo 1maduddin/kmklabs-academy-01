@@ -1,0 +1,3 @@
+name,age,address
+endy,17,menara dea
+ojie,67,desa sigma
