@@ -1,0 +1,6 @@
+http://code.tutsplus.com/tutorials/ruby-for-newbies-testing-with-rspec--net-21297
+http://lmws.net/describe-vs-context-in-rspec
+http://betterspecs.org/
+https://www.launchacademy.com/codecabulary/learn-test-driven-development/rspec/before-vs-let
+https://www.relishapp.com/rspec/rspec-core/docs/helper-methods/let-and-let
+
