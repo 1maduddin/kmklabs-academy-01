@@ -7,7 +7,7 @@ end
 puts "2 + 3 = #{tambah(2,3)}";
 
 # Syntactic sugar #1 : return boleh dihilangkan
-def kurang(a, b)
+def eaurang(a, b)
     a - b;
 end
 
@@ -44,3 +44,7 @@ puts "8 + 9 = #{y}";
 
 puts "Apakah 4 negatif ? #{k.negatif? 4}";
 puts "Jumlahkan 3,4,5,6,7 : #{k.jumlahkan 3,4,5,6,7}"
+
+d = kurang 1,2,3
+
+
