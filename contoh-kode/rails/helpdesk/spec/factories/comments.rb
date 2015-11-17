@@ -1,6 +1,7 @@
 FactoryGirl.define do
   factory :comment do
-    content "MyText"
+    content "Ini komentar saya"
+    problem
   end
 
 end

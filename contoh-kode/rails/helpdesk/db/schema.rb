@@ -11,43 +11,54 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151117031545) do
+ActiveRecord::Schema.define(version: 20151117075636) do
 
   create_table "categories", force: :cascade do |t|
-    t.string   "code"
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "code",       limit: 255
+    t.string   "name",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "comments", force: :cascade do |t|
-    t.text     "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "content",    limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.integer  "problem_id", limit: 4
   end
+
+  add_index "comments", ["problem_id"], name: "index_comments_on_problem_id", using: :btree
 
   create_table "problems", force: :cascade do |t|
-    t.string   "title"
-    t.text     "description"
-    t.string   "status"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "title",       limit: 255
+    t.text     "description", limit: 65535
+    t.string   "status",      limit: 255
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.integer  "user_id",     limit: 4
+    t.integer  "product_id",  limit: 4
   end
 
+  add_index "problems", ["product_id"], name: "index_problems_on_product_id", using: :btree
+  add_index "problems", ["user_id"], name: "index_problems_on_user_id", using: :btree
+
   create_table "products", force: :cascade do |t|
-    t.string   "code"
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "code",       limit: 255
+    t.string   "name",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "fullname"
-    t.string   "email"
-    t.string   "password"
-    t.string   "username"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "fullname",   limit: 255
+    t.string   "email",      limit: 255
+    t.string   "password",   limit: 255
+    t.string   "username",   limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
+  add_foreign_key "comments", "problems"
+  add_foreign_key "problems", "products"
+  add_foreign_key "problems", "users"
 end

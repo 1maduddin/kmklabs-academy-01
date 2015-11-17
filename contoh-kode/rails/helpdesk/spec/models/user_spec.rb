@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
     it "creates multiple users" do
+        FactoryGirl.reload
         users = build_list(:user, 10)
         expect(users.length).to eq 10
         expect(

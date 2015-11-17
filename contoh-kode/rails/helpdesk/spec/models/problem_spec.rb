@@ -13,7 +13,13 @@ RSpec.describe Problem, type: :model do
         create(:problem)
         expect(Problem.where(status: 'new').blank?).to be_falsey 
         expect(Problem.where(status: 'assigned').blank?).to be_truthy 
-
+    end
+    
+    it "creates valid associations" do
+        FactoryGirl.reload
+        p = create(:problem)
+        expect(p.user.username).to eql "user1" 
+        expect(p.product.code).to eql "APP-01"
     end
 
 end
