@@ -1,0 +1,23 @@
+Pendekatan ActiveRecord
+
+class Produk < ActiveRecord
+
+end
+
+p = Produk.new
+p.kode = "P-001"
+p.save <-- record bisa disave
+
+Pendekatan Unit of Work
+
+class Produk
+
+end
+
+
+p = Produk.new
+p.kode = "P-002"
+
+pd = ProdukDao.new
+pd.save(p)
+
