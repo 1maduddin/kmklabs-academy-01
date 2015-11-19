@@ -16,12 +16,9 @@ class ProductsController < ApplicationController
     end
 
     def create
-        p = params.require(:product).permit(:code, :name)
+        @product = Product.new(product_params)
 
-        @product = Product.new(p)
-
-        if @product.valid?
-            @product.save
+        if @product.save
             flash[:notice] = "Product #{@product.code} sudah tersimpan"
             redirect_to action: "index"
         else
@@ -29,4 +26,27 @@ class ProductsController < ApplicationController
         end
 
     end
+
+    def edit
+        @product = Product.find(params[:id])
+        rescue ActiveRecord::RecordNotFound
+            flash[:notice] = "Product with id #{params[:id]} not found"
+            redirect_to action: "index"
+    end
+
+    def update
+        p = Product.find(params[:id])
+        if p.update(product_params)
+            flash[:notice] = "Product #{p.code} sudah tersimpan"
+            redirect_to action: "index"
+        else
+            render "edit"
+        end
+    end
+
+    private
+
+        def product_params
+            params.require(:product).permit(:code, :name)
+        end
 end
