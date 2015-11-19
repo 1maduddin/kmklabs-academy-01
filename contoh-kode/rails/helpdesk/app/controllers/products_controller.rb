@@ -43,6 +43,12 @@ class ProductsController < ApplicationController
             render "edit"
         end
     end
+    
+    def destroy
+        p = Product.destroy params[:id]
+        flash[:notice] = "Product #{p.code} sudah dihapus"
+        redirect_to action: "index"
+    end
 
     private
 
