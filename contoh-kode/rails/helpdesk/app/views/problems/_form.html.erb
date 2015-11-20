@@ -45,6 +45,18 @@
   </div>
 
 
+  <% if current_page?(action: "edit")%>
+    
+  <div class="control-group">
+    <%= f.label :product_id, :class => 'control-label' %>
+    <div class="controls">
+       <%= f.select(:status, options_for_select([['Assigned', 'assigned'], ['Fixed', 'fixed'], ['Closed', 'closed']]))  %>
+    </div>
+    <%= error_span(@problem[:product_id]) %>
+  </div>
+
+  <% end  %>
+
   <%= f.submit nil, :class => 'btn btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
             problems_path, :class => 'btn btn-default' %>
