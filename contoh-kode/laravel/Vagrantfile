@@ -3,6 +3,6 @@
 
 Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/trusty64"
-  config.vm.synced_folder "helpdesk", "/home/vagrant/helpdesk"
+  config.vm.synced_folder "helpdesk", "/home/vagrant/helpdesk", create: true, owner: "www-data", group: "www-data"
   config.vm.network "forwarded_port", guest: 80, host: 8080
 end
