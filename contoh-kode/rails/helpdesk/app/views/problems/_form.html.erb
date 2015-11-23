@@ -57,6 +57,16 @@
 
   <% end  %>
 
+
+  <div class="control-group">
+    <%= f.label :attachment, :class => 'control-label' %>
+    <div class="controls">
+        <%= f.file_field :attachment  %>
+    </div>
+    <%= error_span(@problem[:attachment]) %>
+  </div>
+
+
   <%= f.submit nil, :class => 'btn btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
             problems_path, :class => 'btn btn-default' %>

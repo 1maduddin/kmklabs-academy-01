@@ -5,5 +5,7 @@ class Problem < ActiveRecord::Base
     belongs_to :user
     belongs_to :product
     has_many :comments
+    
+    attr_accessor :attachment
 
 end

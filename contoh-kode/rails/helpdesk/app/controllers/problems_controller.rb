@@ -10,9 +10,20 @@ class ProblemsController < ApplicationController
     end
 
     def create
+        att = params[:problem][:attachment]
+        puts "Class dari attachment : #{att.class}"
+
+        file_ext = File.extname(att.original_filename)
+        new_file_name = SecureRandom.uuid
+
+
         p = Problem.new(problem_params)
         p.status = :new
         if p.save
+            FileUtils.mkpath(Rails.root.join('public', 'problems', p.id.to_s, 'attachments'))
+            File.open(Rails.root.join('public', 'problems', p.id.to_s, 'attachments', "#{new_file_name + file_ext}"), 'wb') do |f|
+                f.write att.read
+            end
             flash[:notice] = "Problem #{p.title} sudah tersimpan"
             redirect_to action: "index"
         else
@@ -37,7 +48,7 @@ class ProblemsController < ApplicationController
     private
         
         def problem_params
-            params.require(:problem).permit(:title, :description, :status, :user_id, :product_id)
+            params.require(:problem).permit(:title, :description, :status, :user_id, :product_id, :attachment)
         end
 
 end
