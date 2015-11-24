@@ -42,6 +42,7 @@ rm -rf helpdesk
 composer create-project laravel/laravel helpdesk
 
 echo "Konfigurasi VHost Nginx"
-cp /vagrant/provisioning/config/nginx-vhost /etc/nginx/sites-available/default
+cp /vagrant/provisioning/config/nginx-vhost /etc/nginx/sites-available/helpdesk
+ln -s /etc/nginx/sites-available/helpdesk /etc/nginx/sites-enabled/
 
 echo "Selesai provisioning"

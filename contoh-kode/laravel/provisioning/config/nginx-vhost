@@ -4,7 +4,7 @@ server {
 	root /home/vagrant/helpdesk/public;
 	index index.html index.php index.htm index.nginx-debian.html;
 
-	server_name _;
+	server_name helpdesk.example.com;
 	include hhvm.conf;
 
 	location / {
