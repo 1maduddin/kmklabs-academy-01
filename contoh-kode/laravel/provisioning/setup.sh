@@ -6,6 +6,8 @@ echo "Setup Software Sources"
 cp /vagrant/provisioning/config/sources.list /etc/apt/sources.list
 
 apt-get update
+apt-get upgrade -y
+apt-get dist-upgrade -y
 
 echo "Instalasi Git"
 
