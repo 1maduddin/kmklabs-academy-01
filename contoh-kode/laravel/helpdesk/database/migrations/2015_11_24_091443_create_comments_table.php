@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProductsTable extends Migration
+class CreateCommentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,16 +12,16 @@ class CreateProductsTable extends Migration
      */
     public function up()
     {
-        Schema::create('products', function (Blueprint $table) {
-	    // daftar kolom
+        Schema::create('comments', function (Blueprint $table) {
             $table->increments('id');
-	    $table->string('code');
-	    $table->string('name');
-	    $table->string('description')->nullable();
+	    $table->string('content');
             $table->timestamps();
 
-	    // unique constraint untuk kolom kode
-	    $table->unique('code');
+	    // relasi foreign key
+	    $table->integer('problem_id')->unsigned();
+	    $table->foreign('problem_id')
+                   ->references('id')
+                   ->on('problems');
         });
     }
 
@@ -32,6 +32,6 @@ class CreateProductsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('products');
+        Schema::drop('comments');
     }
 }
