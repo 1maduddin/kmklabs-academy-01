@@ -25,4 +25,18 @@ class ProductTest extends \Codeception\TestCase\Test
             'code' => $product->code
         ]);
     }
+
+    public function testSaveDuplicateCode(){
+        $p = new App\Product();
+        $p->code = "P-006";
+
+        try {
+          $p->save();
+          fail("Harusnya baris ini tidak dijalankan karena ada exception");
+        } catch (Illuminate\Database\QueryException $e) {
+          // sukses, memang harusnya ada exception
+        } catch (Exception $e) {
+          fail("Jenis exception salah, seharusnya QueryException");
+        }
+    }
 }
