@@ -6,6 +6,8 @@
 
     <body>
         <h1>Product List</h1>
+
+        <a href="{{ route('product.create') }}">Add New Product</a>
     
         <table>
         
@@ -24,7 +26,11 @@
                     <td>{{ $p->code }}</td>
                     <td>{{ $p->name}}</td>
                     <td>{{ $p->description }}</td>
-                    <td>&nbsp;</td>
+                    <td>
+                      <a href="{{ route('product.edit', ['id' => $p->id]) }}">edit</a>
+                      <a href="{{ route('product.destroy', ['id' => $p->id])
+                      }}">delete</a>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>
