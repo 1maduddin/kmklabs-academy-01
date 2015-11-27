@@ -1,15 +1,14 @@
-<html>
+@extends('layouts.aplikasi') 
+@section('title', 'Product List')
 
-    <head>
-        <title>Product List</title>
-    </head>
-
-    <body>
+@section('content')
+        
         <h1>Product List</h1>
+
 
         <a href="{{ route('product.create') }}">Add New Product</a>
     
-        <table>
+        <table class="table table-striped table-condensed table-bordered">
         
             <thead>
                 <tr>
@@ -36,8 +35,4 @@
             </tbody>
         </table>
     
-    </body>
-
-    
-
-</html>
+@endsection
