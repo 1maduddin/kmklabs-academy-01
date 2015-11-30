@@ -10,6 +10,7 @@ use App\Http\Controllers\Controller;
 use App\Product;
 
 use Session;
+use Log;
 
 class ProductController extends Controller
 {
@@ -44,6 +45,23 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        if($request->hasFile('photo')){
+            $f = $request->file('photo');
+            $nama = $f->getClientOriginalName();
+            $ukuran = $f->getClientSize();
+
+            $tujuan = public_path('images');
+            $file_tujuan = uniqid().".".$f->getClientOriginalExtension();
+
+            Log::debug("Nama file : $nama");
+            Log::debug("Ukuran file : $ukuran");
+            Log::debug("Lokasi penyimpanan : $tujuan/$file_tujuan");
+
+        
+            $f->move($tujuan, $file_tujuan);
+
+        }
+
         $this->validate($request, [
             'code' => 'required|min:3|max:5',
             'name' => 'required'

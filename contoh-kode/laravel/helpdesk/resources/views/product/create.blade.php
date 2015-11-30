@@ -14,6 +14,7 @@
 @endif
 
 {!! Form::open([
+    'files' => true,
     'route' => 'product.store'
 ]) !!}
 
@@ -30,6 +31,12 @@
 <div class="form-group">
     {!! Form::label('description', 'Description:', ['class' => 'control-label']) !!}
     {!! Form::textarea('description', null, ['class' => 'form-control']) !!}
+</div>
+
+
+<div class="form-group">
+    {!! Form::label('photo', 'Photo:', ['class' => 'control-label']) !!}
+    {!! Form::file('photo', null, ['class' => 'form-control']) !!}
 </div>
 
 {!! Form::submit('Create New Product', ['class' => 'btn btn-primary']) !!}
