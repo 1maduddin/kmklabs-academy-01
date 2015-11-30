@@ -5,6 +5,13 @@
 
 <h1>Create New Product</h1>
 
+@if($errors->any())
+    <div class="alert alert-danger">
+        @foreach($errors->all() as $error)
+            <p>{{ $error }}</p>
+        @endforeach
+    </div>
+@endif
 
 {!! Form::open([
     'route' => 'product.store'
