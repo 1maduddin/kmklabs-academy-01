@@ -9,6 +9,8 @@ use App\Http\Controllers\Controller;
 
 use App\Product;
 
+use Session;
+
 class ProductController extends Controller
 {
     /**
@@ -69,7 +71,9 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-       return view('product.edit'); 
+
+       $p = Product::findOrFail($id);
+       return view('product.edit')->with('product', $p); 
     }
 
     /**
@@ -81,7 +85,14 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $p = Product::findOrFail($id);
+        $this->validate($request, [
+            'code' => 'required|min:3|max:5',
+            'name' => 'required'
+        ]);
+        $p->fill($request->all())->save();
+        Session::flash('flash_message', "Product berhasil disimpan");
+        return redirect()->route('product.index');
     }
 
     /**
