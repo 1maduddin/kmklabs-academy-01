@@ -2,6 +2,9 @@ require 'rails_helper'
 
 describe ProductsController do
 
+    let(:valid_product) { build(:product) }
+    let(:invalid_product) { build(:product, code: nil)}
+
     describe "index" do
         it "should use pagination then render index template" do
             # membuat mock
@@ -27,6 +30,42 @@ describe ProductsController do
         end
     end
 
+    describe "create" do
+        it "should save valid data" do
+            post :create, product: valid_product.attributes
+            expect(response).to redirect_to(action: "index")
+        end
 
+        it "should reject invalid data" do
+            expect_any_instance_of(Product).to receive(:save).and_return(false)
+            post :create, product: invalid_product.attributes
+            expect(response).to render_template("new")
+        end
+    end
+
+
+    describe "show" do
+        it "should show data for valid ID"
+        it "should display error for invalid ID"
+    end
+
+    describe "create" do
+        it "should store valid data to database using ActiveRecord"
+        it "should reject invalid data"
+    end
+
+    describe "edit" do
+        it "should display existing data for valid ID"
+        it "should display error for invalid ID"
+    end
+
+    describe "update" do
+        it "should save valid data"
+        it "should reject invalid data"
+    end
+
+    describe "destroy" do
+        
+    end
 
 end

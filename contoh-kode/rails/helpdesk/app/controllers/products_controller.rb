@@ -17,7 +17,7 @@ class ProductsController < ApplicationController
 
     def create
         @product = Product.new(product_params)
-
+        puts @product.code
         if @product.save
             flash[:notice] = "Product #{@product.code} sudah tersimpan"
             redirect_to action: "index"
