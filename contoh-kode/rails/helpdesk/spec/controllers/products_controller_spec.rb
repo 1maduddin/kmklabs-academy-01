@@ -34,11 +34,12 @@ describe ProductsController do
         it "should save valid data" do
             post :create, product: valid_product.attributes
             expect(response).to redirect_to(action: "index")
+            expect(flash[:notice]).to eql("Product APP-01 sudah tersimpan")
         end
 
         it "should reject invalid data" do
             expect_any_instance_of(Product).to receive(:save).and_return(false)
-            post :create, product: invalid_product.attributes
+            post :create, product: valid_product.attributes
             expect(response).to render_template("new")
         end
     end
