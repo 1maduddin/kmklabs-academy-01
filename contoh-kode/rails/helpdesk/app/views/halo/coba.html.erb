@@ -6,3 +6,21 @@
     <input type="submit">
 
 </form>
+
+
+<table>
+
+    <tr>
+        <th>Judul</th><th>Tanggal</th><th>Excerpt</th>
+    </tr>
+
+    <% @feed.entries.each do |x| %>
+    <tr>
+        <td><%= x.title %></td>
+        <td><%= x.published %></td>
+        <td></td>
+    <tr>
+
+    <% end %>
+
+</table>
